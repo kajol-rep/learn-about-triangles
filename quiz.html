@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/styles.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <span class="text-outline">
+            Triangles
+        </span>
+        <ul class="list-non-bullet nav-item">
+
+
+            <li class="list-inline">
+                <a class="link" href="/">
+                    Learn
+                </a>
+
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/quiz.html">
+                    Quiz
+                </a>
+
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/calculator.html">
+                    Calculator
+                </a>
+
+            </li>
+        </ul>
+
+    </nav>
+    <br><br>
+
+    <div class="card start-pack" id="welcomepanel">
+        Hi Before starting the quiz make sure you know the following:<br>
+        1. You have to answer all the questions.<br>
+        2. Total 10 questions will be asked.<br>
+        3. On every correct answer you will be awarded with 1 mark.<br>
+        4. No negetive marking on wrong answers.<br>
+
+        <br>
+        START QUIZ
+
+
+        <br><br>
+        <button id="startbtn" class="enabled-button">>>></button>
+
+    </div>
+
+    <div class="card" id="quizpanel" style="display: none;">
+
+        <span class="heading">
+            Triangles : Basic Fundamentals
+            <br>
+
+        </span>
+        <span class="que-num"><small>Question <span id="number"></span> of 10</small></span>
+
+
+        <div class="card">
+
+            <span class="content"><strong>Question:</strong> <span id="question"></span></span>
+            <span class="content"
+                style="display: block; background-color: #055468; color: white;"><strong>Instruction:</strong> Choose a
+                option that best answer the question</span>
+            <form>
+                <span class="content" id="1">
+                    <input type="radio" name="answer" value="1" onclick="handleClick()">
+                    <label id="option1"></label>
+                </span>
+                <hr>
+                <span class="content" id="2">
+                    <input type="radio" name="answer" value="2" onclick="handleClick()">
+                    <label id="option2"></label>
+                </span>
+                <hr>
+                <span class="content" id="3">
+                    <input type="radio" name="answer" value="3" onclick="handleClick()">
+                    <label id="option3"></label>
+                </span>
+                <hr>
+                <span class="content" id="4">
+                    <input type="radio" name="answer" value="4" onclick="handleClick()">
+                    <label id="option4"></label>
+                </span>
+            </form>
+        </div>
+
+        <span class="content">
+            <button id="submitbtn" class="submit-button" value="submit">Submit</button>
+            <button id="nextbtn" class="submit-button">Next</button>
+            <button id="scorebtn" class="enabled-button" style="display: none;" onclick="displayScore()">Check Score</button>
+        </span>
+
+
+    </div>
+
+    <div class="card start-pack2" id="scoreboard" style="display: none;">
+        YOU HAVE SCORED <br>
+        <span id="score"></span><br>
+        OUT OF <br>
+        10<br>
+        <button id="backbtn" class="enabled-button" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script src="/app.js" type="text/javascript"></script>
+</body>
+
+</html>
